@@ -7,12 +7,14 @@
 #
 # See the LICENSE.md file for full license terms.
 
-from typing import Any, Sequence
+from typing import Any
+
+from collections.abc import Sequence
 
 import MDAnalysis as mda
 from loguru import logger
 
-from simlify.structure.io import load_mda, write_mda
+from simlify.tasks.io.mda import load_mda, write_mda
 
 
 def extract_atoms(

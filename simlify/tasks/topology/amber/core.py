@@ -27,8 +27,8 @@ from collections.abc import Iterable
 from loguru import logger
 
 from simlify.configs import SimlifyConfig
-from simlify.simulation.topo import TopoGen
-from simlify.structure.solvent import get_ion_counts
+from simlify.tasks.solvent.ions import get_ion_counts
+from simlify.tasks.topology.core import TopoGen
 from simlify.utils import simple_generator
 
 FF_WATER_SOLVENT_BOX_MAP: dict[str, Any] = {

@@ -8,7 +8,7 @@
 # See the LICENSE.md file for full license terms.
 
 
-from simlify.structure.solvent import get_ion_counts
+from simlify.tasks.solvent.ions import get_ion_counts
 
 
 class TestNumberOfIons:

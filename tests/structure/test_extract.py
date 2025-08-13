@@ -12,7 +12,7 @@ import os
 
 from conftest import download_pdb
 
-from simlify.structure import extract_atoms
+from simlify.tasks.slice.extract import extract_atoms
 
 
 def cache_1haj(dir_test: str) -> str:

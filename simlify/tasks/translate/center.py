@@ -15,8 +15,8 @@ from typing import Any
 import MDAnalysis as mda
 from loguru import logger
 
-from simlify.structure.io import load_mda, write_mda
 from simlify.structure.pos import get_com
+from simlify.tasks.io.mda import load_mda, write_mda
 
 
 def center_structure(u: mda.Universe) -> mda.Universe:

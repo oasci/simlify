@@ -16,7 +16,7 @@ import pytest
 from simlify import enable_logging
 from simlify.configs import SimlifyConfig
 from simlify.configs.amber import Amber22Config
-from simlify.structure.io import load_mda
+from simlify.tasks.io.mda import load_mda
 
 TEST_DIR: str = os.path.dirname(__file__)
 TMP_DIR: str = os.path.join(TEST_DIR, "tmp")

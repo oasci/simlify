@@ -13,7 +13,7 @@ Command-line interface for extracting atoms or frames from molecular structure f
 
 import argparse
 
-from simlify.structure import extract_atoms
+from simlify.tasks.slice.extract import extract_atoms
 
 
 def add_extract_subparser(subparsers):

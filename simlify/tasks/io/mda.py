@@ -16,9 +16,10 @@ such as loading topology and coordinate files into MDAnalysis Universe objects
 and saving coordinates to various supported formats.
 """
 
-from typing import Any, Sequence
+from typing import Any
 
 import os
+from collections.abc import Sequence
 
 import MDAnalysis as mda
 from loguru import logger
@@ -73,7 +74,7 @@ def load_mda(
 
         ```python
         import MDAnalysis as mda
-        from simlify.structure.io import load_mda
+        from simlify.tasks.io.mda import load_mda
 
         try:
             universe = load_mda("protein.pdb")
@@ -86,7 +87,7 @@ def load_mda(
 
         ```python
         import MDAnalysis as mda
-        from simlify.structure.io import load_mda
+        from simlify.tasks.io.mda import load_mda
 
         try:
             universe = load_mda("protein.gro", "trajectory.xtc")
@@ -99,7 +100,7 @@ def load_mda(
 
         ```python
         import MDAnalysis as mda
-        from simlify.structure.io import load_mda
+        from simlify.tasks.io.mda import load_mda
 
         try:
             universe = load_mda("topol.tpr", ["traj1.trr", "traj2.trr"])
@@ -114,7 +115,7 @@ def load_mda(
 
         ```python
         import MDAnalysis as mda
-        from simlify.structure.io import load_mda
+        from simlify.tasks.io.mda import load_mda
 
         try:
             universe = load_mda("complex.pdb", kwargs={"atom_name_column": "name"})
@@ -186,7 +187,7 @@ def write_mda(
 
         ```python
         import MDAnalysis as mda
-        from simlify.structure.io import load_mda, write_mda
+        from simlify.tasks.io.mda import load_mda, write_mda
 
         # Assume 'universe' is an MDAnalysis Universe object loaded previously
         try:
@@ -201,7 +202,7 @@ def write_mda(
 
         ```python
         import MDAnalysis as mda
-        from simlify.structure.io import load_mda, write_mda
+        from simlify.tasks.io.mda import load_mda, write_mda
 
         # Assume 'universe' is an MDAnalysis Universe object with a trajectory
         universe = load_mda("topol.tpr", "traj.trr")
@@ -220,7 +221,7 @@ def write_mda(
 
         ```python
         import MDAnalysis as mda
-        from simlify.structure.io import load_mda, write_mda
+        from simlify.tasks.io.mda import load_mda, write_mda
 
         # Assume 'universe' is an MDAnalysis Universe object
         universe = load_mda("system.pdb")
@@ -235,7 +236,7 @@ def write_mda(
 
         ```python
         import MDAnalysis as mda
-        from simlify.structure.io import load_mda, write_mda
+        from simlify.tasks.io.mda import load_mda, write_mda
 
         # Assume 'universe' is an MDAnalysis Universe object
         universe = load_mda("input.pdb")
